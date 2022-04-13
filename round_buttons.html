@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h2 {
+            font-size: 10em;
+        }
+        
+        .dot {
+            height: 5em;
+            width: 5em;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            /*To allow users to resize the text (in the browser menu), 
+            use em instead of pixels.1em is equal to the current 
+            font size. The default text size in browsers is 16px. So, the default 
+            size of 1em is 16px. The size can be calculated from pixels to em using 
+            this formula: pixels/16=em*/
+        }
+        
+        .button {
+            font-size: 7em;
+            color: white;
+            display: grid;
+            height: 1.1em;
+            width: 1.1em;
+            background-color: rgb(72, 0, 255);
+            place-content: center;
+            border-radius: 50%;
+            display: inline-block;
+            padding: 1px 1px 10px 1px;
+            font-family: "Courier New"
+        }
+        
+        .button1 {
+            color: aquamarine;
+        }
+        
+        .button2 {
+            color: orangered;
+        }
+        
+        h1.intro {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="intro">Leke med "button" funksjoner</h1>
+
+    <div style="text-align:center">
+        <h1>Her er to <q>Round Dots / Circles</q> og to knapper</h1>
+
+        <span class="dot"><p>DOT</p></span>
+        <div style="background-color:orange"> div-tag lager en seksjon. For linjskift bruk br-tag <br></div>
+        <span class="dot">DOT</span>
+        <!--Use wrapper element  <div>  -->
+
+        <div>
+            <button class="button button1" id='increment-btn' onclick="increment()">+</button>
+        </div>
+        <div style="background-color:orange">
+            <h2 id="count-el">1</h2>
+        </div>
+        <div>
+            <button class="button button2" id="decrement-btn" onclick="decrement()">-</button>
+        </div>
+        <script src="round_buttons.js"></script>
+    </div>
+
+</body>
+
+</html>
