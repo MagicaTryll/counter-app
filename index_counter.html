@@ -5,19 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         h2 {
-            font-size: 7em;
+            font-size: 6em;
+            color: white;
+        }
+        
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            border: radius 25%;
+        }
+        
+        .flex-container>span {
+            color: yellow;
+            margin: -4em -3em;
         }
         
         div {
-            margin: -3.5em 20em;
-            background-color: orangered;
+            margin: -1.5em 20em;
             text-align: center;
+            padding: 1em;
+        }
+        
+        .div1 {
+            background: orangered;
+            border: 0.5em solid;
+            border-radius: 20%;
+            border-color: yellow
         }
         
         .dot {
-            height: 7em;
-            width: 7em;
-            background-color: greenyellow;
+            height: 8em;
+            width: 8em;
+            background-color: rgb(152, 207, 70);
             border-radius: 50%;
             display: inline-block;
             /*To allow users to resize the text (in the browser menu), 
@@ -27,17 +46,12 @@
             this formula: pixels/16=em*/
         }
         
-        .dot-TL {
-            margin-left: 17em;
+        .dot-minus {
             z-index: -1;
         }
         
-        .dot-TH {
-            margin-left: 50em;
-        }
-        
         .button {
-            font-size: 7em;
+            font-size: 6em;
             color: white;
             display: grid;
             height: 1.1em;
@@ -48,20 +62,21 @@
             display: inline-block;
             font-family: "Courier New"
         }
-        
-        h1.intro {
-            color: blue;
-        }
     </style>
 </head>
-<header>
-    <span class="dot dot-TL">TL</span>
-    <p>Sentrer</p>
-    <span class="dot dot-TH">TH</span>
-</header>
 
 <body>
     <div>
+        <h1 style="color:rgb(102, 155, 9)">Telle opp og ned</h1>
+    </div>
+    <div class="flex-container">
+        <span class="flex-container dot">
+        </span>
+        <span class="flex-container dot dot-minus"></span>
+    </div>
+
+
+    <div class="div1" id="color-el">
         <!--Use wrapper element  <div>  -->
         <button class="button" id='increment-btn' onclick="increment()">+</button>
 
@@ -70,7 +85,11 @@
 
         <script src="round_buttons.js"></script>
     </div>
-
+    <div class="flex-container">
+        <span class="flex-container dot dot-minus">
+        </span>
+        <span class="flex-container dot"></span>
+    </div>
 </body>
 
 </html>
